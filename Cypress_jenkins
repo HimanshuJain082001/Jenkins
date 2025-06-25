@@ -2,13 +2,12 @@ pipeline {
   agent any
 
   environment {
-    CI = 'true'  // Cypress needs this in CI
+    CI = 'true' // Tells Cypress it's running in a CI environment
   }
 
   stages {
     stage('Checkout') {
       steps {
-        // Checkout your repo and branch
         git url: 'https://github.com/HimanshuJain082001/Jenkins.git', branch: 'New'
       }
     }
@@ -16,8 +15,7 @@ pipeline {
     stage('Install Dependencies') {
       steps {
         dir('Cypress_Project') {
-          // Install npm dependencies inside Cypress_Project folder
-          sh 'npm ci'
+          sh 'npm ci' // or use 'npm install' if no package-lock.json
         }
       }
     }
@@ -25,7 +23,6 @@ pipeline {
     stage('Run Cypress Tests') {
       steps {
         dir('Cypress_Project') {
-          // Run Cypress tests inside Cypress_Project folder
           sh 'npx cypress run'
         }
       }
@@ -35,7 +32,7 @@ pipeline {
   post {
     always {
       dir('Cypress_Project') {
-        // Archive videos and screenshots from Cypress runs
+        // Archive Cypress test artifacts
         archiveArtifacts artifacts: 'cypress/videos/**/*.*', allowEmptyArchive: true
         archiveArtifacts artifacts: 'cypress/screenshots/**/*.*', allowEmptyArchive: true
       }
