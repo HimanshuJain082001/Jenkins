@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    CI = 'true' // Tells Cypress it's running in a CI environment
+    CI = 'true'
   }
 
   stages {
@@ -15,7 +15,7 @@ pipeline {
     stage('Install Dependencies') {
       steps {
         dir('Cypress_Project') {
-          sh 'npm ci' // or use 'npm install' if no package-lock.json
+          bat 'npm ci'
         }
       }
     }
@@ -23,7 +23,7 @@ pipeline {
     stage('Run Cypress Tests') {
       steps {
         dir('Cypress_Project') {
-          sh 'npx cypress run'
+          bat 'npx cypress run'
         }
       }
     }
@@ -32,7 +32,6 @@ pipeline {
   post {
     always {
       dir('Cypress_Project') {
-        // Archive Cypress test artifacts
         archiveArtifacts artifacts: 'cypress/videos/**/*.*', allowEmptyArchive: true
         archiveArtifacts artifacts: 'cypress/screenshots/**/*.*', allowEmptyArchive: true
       }
