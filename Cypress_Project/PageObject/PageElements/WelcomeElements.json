@@ -1,0 +1,14 @@
+{
+    "WelcomeLocator":
+    {
+        "WelcomeTitle":"#nameofuser",
+        "ImageDis":"img[alt='First slide']",
+        "rightSlider": ".carousel-control-next-icon",
+        "leftSlider":".carousel-control-prev-icon",
+        "Phone":"//div[@id='contcont']//a[2]",
+        "laptop":"(//a[normalize-space()='Laptops'])[1]",
+        "Monitors":"(//a[normalize-space()='Monitors'])[1]",
+        "previousBtn":"#prev2",
+        "Nextbtn":"#next2"
+    }
+}

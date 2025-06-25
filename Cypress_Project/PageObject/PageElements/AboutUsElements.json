@@ -1,0 +1,8 @@
+{
+    "AboutUsLocator":
+    {
+        "AboutUsBTn": "a[data-target='#videoModal']",
+        "AboutUsContent":"div[aria-label='Modal Window'] div[role='document']",
+        "CloseBtn":"#videoModal > .modal-dialog > .modal-content > .modal-footer > .btn"
+    }
+}

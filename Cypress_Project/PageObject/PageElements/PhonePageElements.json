@@ -1,0 +1,9 @@
+{
+    "PhonePage":
+    {
+        "mobileSamsung":":nth-child(1) > .card > .card-block > .card-title > .hrefch",
+        "mobileNokia":"//a[normalize-space()='Nokia lumia 1520']",
+        "mobileNameValidation":".name",
+        "addtocartitem":".col-sm-12 > .btn"
+    }
+}

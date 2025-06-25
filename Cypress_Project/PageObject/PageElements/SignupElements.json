@@ -1,0 +1,10 @@
+{
+    "SignUpLocators":
+   {
+    "homeLink": ".active > .nav-link",
+    "signbutton": "#signin2",
+    "username": "#sign-username",
+    "password": "#sign-password",
+    "signBtn":"#signInModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary"
+   }
+}

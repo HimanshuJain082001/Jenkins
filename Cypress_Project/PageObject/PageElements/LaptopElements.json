@@ -1,0 +1,11 @@
+{
+    "Laptop":
+    {
+        "laptopbtn":"body > div:nth-child(6) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > a:nth-child(3)",
+        "Laptopname":":nth-child(1) > .card > .card-block > .card-title > .hrefch",
+        "SelectedLap":".name",
+        "lapPrice":".price-container",
+        "AddBtn":".col-sm-12 > .btn",
+        "cartBtnL": "#cartur"
+    }
+}

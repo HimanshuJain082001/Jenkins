@@ -1,0 +1,10 @@
+{
+    "LoginLocators":
+    {
+        "home": ".active > .nav-link",
+        "loginbuttonBefore":"#login2",
+        "usernameL":"#loginusername",
+        "passwordl":"#loginpassword",
+        "loginBtnAfter":"button[onclick='logIn()']"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "monitor":
+    {
+        "monitorBtn":"body > div:nth-child(6) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > a:nth-child(4)",
+        "selectedMonitor":":nth-child(1) > .card > .card-block > .card-title > .hrefch",
+        "verifyName":".name",
+        "AddtoCartBtn":".col-sm-12 > .btn",
+        "cartbtn3":"#cartur"
+    }
+}

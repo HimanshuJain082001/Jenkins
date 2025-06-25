@@ -1,0 +1,11 @@
+{
+    "contactlocator":
+    {
+        "contactbtn": "a[data-target='#exampleModal']",
+        "contactEmailAdd":"#recipient-email",
+        "contactName": "#recipient-name",
+        "MessageBox": "#message-text",
+        "SendMessage":"button[onclick='send()']",
+        "closeBtn": "div[id='exampleModal'] div[class='modal-footer'] button:nth-child(1)"
+    }
+}

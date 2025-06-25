@@ -1,0 +1,40 @@
+{
+    "Locator": {
+      "HomePage": {
+        "SignIn": "#btn1",
+        "Skip SignIn": "#btn2",
+        "EmailID for Signup": "#email",
+        "EnterBtn":"#enterimg"
+      },
+      "RegisterPage": {
+        "First Name": "input[placeholder='First Name']",
+        "Last Name": "input[placeholder='Last Name']",
+        "Address": ".form-control.ng-valid.ng-touched.ng-dirty.ng-valid-parse",
+        "Email address": "input[type='email']",
+        "Phone": "input[type='tel']",
+        "Gender": {
+          "Male": "input[value='Male']",
+          "Female": "input[value='FeMale']"
+        },
+        "Hobbies": {
+          "Cricket": "#checkbox1",
+          "Movies": "#checkbox2",
+          "Hockey": "#checkbox3"
+        },
+        "Languages": "#msdd",
+        "Skills": "#Skills",
+        "Country": "#countries",
+        "Select Country": "#select2-country-container",
+        "Date Of Birth": {
+          "Year": "#yearbox",
+          "Month": "select[placeholder='Month']",
+          "Day": "#daybox"
+        },
+        "Password": "#firstpassword",
+        "Confirm Password": "#secondpassword",
+        "SubmitBtn": "#submitbtn",
+        "Refresh": "#Button1"
+      }
+    }
+  }
+  
