@@ -2,33 +2,43 @@ pipeline {
   agent any
 
   environment {
-    CI = 'true' // Required for Cypress to behave correctly in CI
+    CI = 'true'  // Cypress needs this in CI
   }
 
   stages {
     stage('Checkout') {
       steps {
+        // Checkout your repo and branch
         git url: 'https://github.com/HimanshuJain082001/Jenkins.git', branch: 'New'
       }
     }
 
     stage('Install Dependencies') {
       steps {
-        sh 'npm ci' 
+        dir('Cypress_Project') {
+          // Install npm dependencies inside Cypress_Project folder
+          sh 'npm ci'
+        }
       }
     }
 
     stage('Run Cypress Tests') {
       steps {
-        sh 'npx cypress run'
+        dir('Cypress_Project') {
+          // Run Cypress tests inside Cypress_Project folder
+          sh 'npx cypress run'
+        }
       }
     }
   }
 
   post {
     always {
-      archiveArtifacts artifacts: 'cypress/videos/**/*.*', allowEmptyArchive: true
-      archiveArtifacts artifacts: 'cypress/screenshots/**/*.*', allowEmptyArchive: true
+      dir('Cypress_Project') {
+        // Archive videos and screenshots from Cypress runs
+        archiveArtifacts artifacts: 'cypress/videos/**/*.*', allowEmptyArchive: true
+        archiveArtifacts artifacts: 'cypress/screenshots/**/*.*', allowEmptyArchive: true
+      }
     }
   }
 }
