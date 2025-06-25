@@ -21,5 +21,12 @@ pipeline {
                 echo 'Deploying the application'
             }
         }
+        stage('Maintain')
+        {
+            steps
+            {
+                echo 'Maintaining the application after Deploy'
+            }
+        }
     }
 }
