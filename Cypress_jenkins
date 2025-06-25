@@ -1,0 +1,34 @@
+pipeline {
+  agent any
+
+  environment {
+    CI = 'true' // Required for Cypress to behave correctly in CI
+  }
+
+  stages {
+    stage('Checkout') {
+      steps {
+        git url: 'https://github.com/HimanshuJain082001/Jenkins.git', branch: 'New'
+      }
+    }
+
+    stage('Install Dependencies') {
+      steps {
+        sh 'npm ci' 
+      }
+    }
+
+    stage('Run Cypress Tests') {
+      steps {
+        sh 'npx cypress run'
+      }
+    }
+  }
+
+  post {
+    always {
+      archiveArtifacts artifacts: 'cypress/videos/**/*.*', allowEmptyArchive: true
+      archiveArtifacts artifacts: 'cypress/screenshots/**/*.*', allowEmptyArchive: true
+    }
+  }
+}
