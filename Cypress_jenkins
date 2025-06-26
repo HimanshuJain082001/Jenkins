@@ -14,7 +14,7 @@ pipeline {
 
     stage('Install Dependencies') {
       steps {
-        dir('Cypress_Project') {
+        dir('CypressAutomation') {
           bat 'npm ci'
         }
       }
@@ -22,7 +22,7 @@ pipeline {
 
     stage('Run Cypress Tests') {
       steps {
-        dir('Cypress_Project') {
+        dir('CypressAutomation') {
           bat 'npx cypress run'
         }
       }
@@ -31,7 +31,7 @@ pipeline {
 
   post {
     always {
-      dir('Cypress_Project') {
+      dir('CypressAutomation') {
         archiveArtifacts artifacts: 'cypress/videos/**/*.*', allowEmptyArchive: true
         archiveArtifacts artifacts: 'cypress/screenshots/**/*.*', allowEmptyArchive: true
       }
