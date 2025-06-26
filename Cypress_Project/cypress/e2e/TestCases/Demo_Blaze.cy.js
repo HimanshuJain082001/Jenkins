@@ -27,7 +27,7 @@ describe('DemoBlaze is demo Website using for Automation',()=>
         cy.wait(2000)
         login.Homeforlogin()
         login.login()
-        login.LoginData("aha","aha")
+        login.LoginData("Jioo","go")
 
         //welcome Page
         cy.wait(2000);

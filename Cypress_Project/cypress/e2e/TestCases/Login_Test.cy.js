@@ -9,7 +9,8 @@ describe('DemoBlaze is demo Website',()=>
         cy.wait(2000)
         login.Homeforlogin()
         login.login()
-        login.LoginData("aha","aha")
+        login.LoginData("Jioo","go")
+        cy.wait(2000);
 
     })
 })

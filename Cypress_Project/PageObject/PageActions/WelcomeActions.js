@@ -4,7 +4,7 @@ export class WelcomeActions
 {
     DisplayPage()
     {
-        cy.get(Welcome.WelcomeLocator.WelcomeTitle).should('have.text','Welcome aha').click();
+        cy.get(Welcome.WelcomeLocator.WelcomeTitle).should('have.text','Welcome Jioo').click();
         cy.get(Welcome.WelcomeLocator.ImageDis).should('be.visible');  
     }
     MovementLeftandRight()

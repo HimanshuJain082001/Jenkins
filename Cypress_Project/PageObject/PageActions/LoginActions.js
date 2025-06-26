@@ -15,6 +15,7 @@ export class LoginActions
         cy.get(LoginLocators.LoginLocators.usernameL).type(usernamee)
         cy.get(LoginLocators.LoginLocators.passwordl).type(passwordd)
         cy.get(LoginLocators.LoginLocators.loginBtnAfter).click();
+        cy.wait(4000);
         cy.screenshot("Loginpage");
     }
 }
